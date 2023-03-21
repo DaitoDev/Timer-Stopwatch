@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <!-- Font awesome  -->
+    <script src="https://kit.fontawesome.com/aea30758ce.js" crossorigin="anonymous"></script>
+    <!-- css  -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Timet</title>
+</head>
+
+<body>
+    <!-- Main container  -->
+    <div class="container">
+        <!-- Panel container  -->
+        <div class="wrapper">
+            <!-- Side navbar  -->
+            <nav class="navbar">
+                <div class="nav-item time-nav highlight">
+                    <a href="#" id="timer-btn"><span><i title="Timer" class="fa-regular fa-clock fa-2x"></i></span>
+                        <p class="nav-desc">Timer</p>
+                    </a>
+                </div>
+                <div class="nav-item stopwatch-nav">
+                    <a href="#" id="stopwatch-btn"> <span><i title="Stopwatch"
+                                class="fa-solid fa-stopwatch fa-2x"></i></i></span>
+                        <p class="nav-desc">Stopwatch</p>
+                    </a>
+                </div>
+            </nav>
+            <!-- Main where the clocks will be  -->
+            <main>
+                <!-- Timer container  -->
+                <section class="timer-container">
+                    <p>Timer</p>
+                    <h2>
+                        <span class="tm-min">00</span> :
+                        <span class="tm-sec">00</span>
+                    </h2>
+
+                    <div class="timer-btns">
+                        <a href="#" class="btn timer-go"><i id="tm-start" class="fa-solid fa-play fa-2x"></i></a>
+                        <a href="#" class="btn timer-stop"><i id="tm-stop"
+                                class="fa-solid fa-circle-stop fa-2x"></i></a>
+                        <a href="#" class="btn timer-reset"><i id="tm-reset"
+                                class="fa-solid fa-rotate-right fa-2x"></i></a>
+                    </div>
+                </section>
+
+                <!-- Stopwatch container  -->
+                <section class="stopwatch-container hide">
+                    <p>Stopwatch</p>
+                    <h2 id="sw-h2"><span class="sw-hr">00</span> :
+                        <span class="sw-min">00</span> :
+                        <span class="sw-sec">00</span> :
+                        <span class="sw-ms">00</span>
+                    </h2>
+                    <div class="stopwatch-btns">
+                        <a href="#" class="btn stopwatch-go"><i id="sw-start" class="fa-solid fa-play fa-2x"></i></a>
+                        <a href="#" class="btn stopwatch-stop"><i id="sw-stop"
+                                class="fa-solid fa-circle-stop fa-2x"></i></a>
+                        <a href="#" class="btn stopwatch-reset"><i id="sw-reset"
+                                class="fa-solid fa-rotate-right  fa-2x"></i></a>
+                    </div>
+                </section>
+
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Script files  -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+/* RESETING CSS ========================================= */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* *{
+    text-align: center;
+} */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a{
+    color: white;
+    text-decoration: none;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* END OF RESETING CSS ========================================= */
+
+/* Misc styling  */
+*{
+    color: white;
+}
+
+/* Main container aligning wrapper  */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(31, 40, 43);
+}
+
+/* Time panel wrapper  */
+.wrapper{
+    height: 600px;
+    min-width: 320px;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: rgb(31, 40, 43);
+}
+
+/* Side Navbar  */
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    background-color: rgb(31, 50, 54);
+    border-right: 3px solid rgb(78, 196, 156);
+}
+
+/* nav items  */
+.nav-item, #timer-btn, #stopwatch-btn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.nav-item{
+    padding: 0.8rem ;
+    transition: all 0.3s ease;
+    
+}
+
+.nav-item:hover{
+    background-color: rgb(78, 196, 156);
+}
+
+/* =======  */
+.navbar,
+main{
+    min-height: 100%;
+}
+/* ========  */
+
+/* Main section and its child containers*/
+main{
+    width: 700px;
+    box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.37);
+}
+
+main,
+.timer-container,
+.stopwatch-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.timer-container,
+.stopwatch-container{
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 1rem;
+    min-width:15rem;
+    min-height:15rem;
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    gap: 3rem;
+}
+
+/* Buttons ICONS inside timer and stopwatch container  */
+.timer-container div,
+.stopwatch-container div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;    
+}
+
+.timer-go .fa-solid,
+.stopwatch-go .fa-solid{
+    color: rgb(67, 219, 100);
+}
+
+.timer-stop .fa-solid,
+.stopwatch-stop .fa-solid{
+    color: rgb(221, 70, 70);
+}
+
+.timer-reset .fa-solid,
+.stopwatch-reset .fa-solid{
+    color: rgb(67, 131, 214);
+}
+
+.timer-go .fa-solid:hover,
+.stopwatch-go .fa-solid:hover,
+.timer-stop .fa-solid:hover,
+.stopwatch-stop .fa-solid:hover,
+.timer-reset .fa-solid:hover,
+.stopwatch-reset .fa-solid:hover{
+    opacity: 0.8;
+}
+
+/* Displays numbers inside timer and stopwatch container  */
+.stopwatch-container h2,
+.timer-container h2{
+    position: absolute;
+    top: 40%;
+    left: 33.5%;
+    font-size: 3rem;
+    width: 23rem;
+}
+
+#sw-h2{
+    top: 40%;
+    left:15%;
+}
+/* TIMER FORM INPPUT */
+#timer-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex;
+}
+
+/* Hides container  */
+.hide{
+    display: none;
+}
+
+/* highlight for active nav item tap  */
+.highlight{
+    background-color: rgb(78, 196, 156);
+}
+
+
+
+
+/* ====================================MEDIA SCREEN SIZES===============================  */
+
+@media  screen and (max-width: 720px) {
+
+    .timer-container,
+    .stopwatch-container{
+        width: 85%;
+    }
+
+    .stopwatch-container h2,
+    .timer-container h2{
+    font-size: 2.1rem;
+    width: 16rem;
+}
+    
+}
+
+@media  screen and (max-width: 510px) {
+
+    /* Collapses Navbar to only icons  */
+    .nav-desc{
+        display: none;
+    }
+
+    .timer-container,
+    .stopwatch-container{
+        width: 98%;
+    }
+
+    stopwatch-container h2,
+    .timer-container h2{
+    font-size: 2rem;
+    width: 15rem;
+}
+
+}
+
+@media  screen and (max-width: 380px) {
+
+    .timer-container,
+    .stopwatch-container{
+        width: 99%;
+    }
+
+    .stopwatch-container h2,
+    .timer-container h2{
+    font-size: 1.5rem;
+    width: 12rem;
+}
+}
+
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
